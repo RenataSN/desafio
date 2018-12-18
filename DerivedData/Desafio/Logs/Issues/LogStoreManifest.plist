@@ -5,7 +5,54 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>8954C1DC-A563-4157-8F87-C81B328D47F1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>8954C1DC-A563-4157-8F87-C81B328D47F1.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Desafio-agqdeebywgkotcfhcojucamlnxjw</string>
+			<key>timeStartedRecording</key>
+			<real>566810828.03783798</real>
+			<key>timeStoppedRecording</key>
+			<real>566810829.43754101</real>
+			<key>title</key>
+			<string>Build target Desafio</string>
+			<key>uniqueIdentifier</key>
+			<string>8954C1DC-A563-4157-8F87-C81B328D47F1</string>
+		</dict>
+		<key>E982FB38-F156-42E5-9FDD-4146E29A4118</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>E982FB38-F156-42E5-9FDD-4146E29A4118.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Desafio-crdinwgbwzpeflbqidiinshdvnfm</string>
+			<key>timeStartedRecording</key>
+			<real>566794085.08182502</real>
+			<key>timeStoppedRecording</key>
+			<real>566794085.89859903</real>
+			<key>title</key>
+			<string>Build target Desafio</string>
+			<key>uniqueIdentifier</key>
+			<string>E982FB38-F156-42E5-9FDD-4146E29A4118</string>
+		</dict>
+	</dict>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>
