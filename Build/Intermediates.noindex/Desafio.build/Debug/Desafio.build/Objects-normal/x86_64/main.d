@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/renatasilva/Documents/Desafio\ Trainee\ Bemol/Desafio/Desafio/main.cpp
+  /Users/renatasilva/Documents/Desafio\ Trainee\ Bemol/desafio/Desafio/main.cpp

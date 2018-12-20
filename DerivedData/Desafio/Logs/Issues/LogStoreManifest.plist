@@ -6,6 +6,29 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
+		<key>4E7769AF-C67A-4CA4-9F81-F4D3348D922E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>4E7769AF-C67A-4CA4-9F81-F4D3348D922E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Desafio-hdylyudxofhjncfhwayzjjnnhvsc</string>
+			<key>timeStartedRecording</key>
+			<real>567032548.67720103</real>
+			<key>timeStoppedRecording</key>
+			<real>567032550.15710294</real>
+			<key>title</key>
+			<string>Build target Desafio</string>
+			<key>uniqueIdentifier</key>
+			<string>4E7769AF-C67A-4CA4-9F81-F4D3348D922E</string>
+		</dict>
 		<key>8954C1DC-A563-4157-8F87-C81B328D47F1</key>
 		<dict>
 			<key>className</key>

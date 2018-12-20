@@ -15,9 +15,9 @@
 
 using namespace std;
 typedef struct {
-    int id, saldo, historico, soma_pontos, uso_pontos, expirado, avista, soma_avista, aprazo, soma_pontualidade, c, d, h, k, o, saldo_historico;
+    int id, saldo, historico, soma_pontos, uso_pontos, expirado, avista, soma_avista, aprazo, soma_pontualidade, num_cartao, classificacao, medalhas, votos, bonus_avaliacoes, saldo_historico;
     double soma_aprazo;
-    string b, e, f, g, i, j, l, m, n, p, q;
+    string data_cadastro, estado_civil, tem_filhos, limite_disponivel, CNH, cartao_adicional, renda_familiar, profissao, outros_cartoes, sexo, num_solicitacao_cartao;
 } Cliente;
 Cliente cliente[10];
 
@@ -124,22 +124,22 @@ void setClient(string nameFile, int indexColumn, int indexClient, string token){
         if (indexColumn == 11){ cliente[indexClient].soma_pontualidade = atoi(token.c_str()); return; }
     }
     else{
-        if (indexColumn == 1){ cliente[indexClient].b = token; return; }
-        if (indexColumn == 2){ cliente[indexClient].c = atoi(token.c_str()); return; }
-        if (indexColumn == 3){ cliente[indexClient].d = atoi(token.c_str()); return; }
-        if (indexColumn == 4){ cliente[indexClient].e = token; return; }
-        if (indexColumn == 5){ cliente[indexClient].f = token.c_str(); return; }
-        if (indexColumn == 6){ cliente[indexClient].g = token.c_str(); return; }
-        if (indexColumn == 7){ cliente[indexClient].h = atoi(token.c_str()); return; }
-        if (indexColumn == 8){ cliente[indexClient].i = token.c_str(); return; }
-        if (indexColumn == 9){ cliente[indexClient].j = token.c_str(); return; }
-        if (indexColumn == 10){ cliente[indexClient].k = atoi(token.c_str()); return; }
-        if (indexColumn == 11){ cliente[indexClient].l = token; return; }
-        if (indexColumn == 12){ cliente[indexClient].m = token; return; }
-        if (indexColumn == 13){ cliente[indexClient].n = token; return; }
-        if (indexColumn == 14){ cliente[indexClient].o = atoi(token.c_str()); return; }
-        if (indexColumn == 15){ cliente[indexClient].p = token.c_str(); return; }
-        if (indexColumn == 16){ cliente[indexClient].q = token; return; }
+        if (indexColumn == 1){ cliente[indexClient].data_cadastro = token; return; }
+        if (indexColumn == 2){ cliente[indexClient].num_cartao = atoi(token.c_str()); return; }
+        if (indexColumn == 3){ cliente[indexClient].classificacao = atoi(token.c_str()); return; }
+        if (indexColumn == 4){ cliente[indexClient].estado_civil = token; return; }
+        if (indexColumn == 5){ cliente[indexClient].tem_filhos = token.c_str(); return; }
+        if (indexColumn == 6){ cliente[indexClient].limite_disponivel = token.c_str(); return; }
+        if (indexColumn == 7){ cliente[indexClient].medalhas = atoi(token.c_str()); return; }
+        if (indexColumn == 8){ cliente[indexClient].CNH = token.c_str(); return; }
+        if (indexColumn == 9){ cliente[indexClient].cartao_adicional = token.c_str(); return; }
+        if (indexColumn == 10){ cliente[indexClient].votos = atoi(token.c_str()); return; }
+        if (indexColumn == 11){ cliente[indexClient].renda_familiar = token; return; }
+        if (indexColumn == 12){ cliente[indexClient].profissao = token; return; }
+        if (indexColumn == 13){ cliente[indexClient].outros_cartoes = token; return; }
+        if (indexColumn == 14){ cliente[indexClient].bonus_avaliacoes = atoi(token.c_str()); return; }
+        if (indexColumn == 15){ cliente[indexClient].sexo = token.c_str(); return; }
+        if (indexColumn == 16){ cliente[indexClient].num_solicitacao_cartao = token; return; }
     }
 }
 
@@ -165,8 +165,8 @@ void orderCliente(){
 void setData(){
     fileDados.open("../../../files/DADOS.txt",ios::app);
     if (fileDados.is_open()) {
-        string headFileClientes = "data_cadastro | num_cartao | classificacao | estado_civil | tem_filhos | limite_disponivel | medalhas | CNH | cartao_adicional | votos | renda_familiar | profissao | outros_cartoes | bonus_avaliacoes | sexo | q | saldo_historico";
-        string headFileBonus = "cliente | saldo | historico | soma_pontos | uso_pontos | expirado | avista | soma_avista | aprazo | soma_aprazo | soma_pontualidade";
+        string headFileClientes = "data_cadastro | num_cartao | classificacao | estado_civil | tem_filhos | limite_disponivel | medalhas | CNH | cartao_adicional | votos | renda_familiar | profissao | outros_cartoes | bonus_avaliacoes | sexo | num_solicitacao_cartao | saldo_historico";
+        string headFileBonus = "cliente | saldo | historico | soma_pontos | uso_pontos | expirado | avista | soma_avista | aprazo | soma_aprazo | soma_pontualidade | ";
         string headComplete = headFileBonus + " " + headFileClientes;
         cout << headComplete << endl;
         fileDados << headComplete << "\n";
@@ -184,23 +184,22 @@ void setData(){
             fileDados << cliente[i].aprazo << " | ";
             fileDados << cliente[i].soma_aprazo << " | ";
             fileDados << cliente[i].soma_pontualidade << " | ";
-            
-            fileDados << cliente[i].b << " | ";
-            fileDados << cliente[i].c << " | ";
-            fileDados << cliente[i].d << " | ";
-            fileDados << cliente[i].e << " | ";
-            fileDados << cliente[i].f << " | ";
-            fileDados << cliente[i].g << " | ";
-            fileDados << cliente[i].h << " | ";
-            fileDados << cliente[i].i << " | ";
-            fileDados << cliente[i].j << " | ";
-            fileDados << cliente[i].k << " | ";
-            fileDados << cliente[i].l << " | ";
-            fileDados << cliente[i].m << " | ";
-            fileDados << cliente[i].n << " | ";
-            fileDados << cliente[i].o << " | ";
-            fileDados << cliente[i].p << " | ";
-            fileDados << cliente[i].q << " | ";
+            fileDados << cliente[i].data_cadastro << " | ";
+            fileDados << cliente[i].num_cartao << " | ";
+            fileDados << cliente[i].classificacao << " | ";
+            fileDados << cliente[i].estado_civil << " | ";
+            fileDados << cliente[i].tem_filhos << " | ";
+            fileDados << cliente[i].limite_disponivel << " | ";
+            fileDados << cliente[i].medalhas << " | ";
+            fileDados << cliente[i].CNH << " | ";
+            fileDados << cliente[i].cartao_adicional << " | ";
+            fileDados << cliente[i].votos << " | ";
+            fileDados << cliente[i].renda_familiar << " | ";
+            fileDados << cliente[i].profissao << " | ";
+            fileDados << cliente[i].outros_cartoes << " | ";
+            fileDados << cliente[i].bonus_avaliacoes << " | ";
+            fileDados << cliente[i].sexo << " | ";
+            fileDados << cliente[i].num_solicitacao_cartao << " | ";
             fileDados << cliente[i].saldo_historico << endl;
         }
     }
@@ -221,22 +220,22 @@ void showDate(){
         cout << cliente[i].aprazo << "\t";
         cout << cliente[i].soma_aprazo << "\t";
         cout << cliente[i].soma_pontualidade << "\t";
-        cout << cliente[i].b << "\t";
-        cout << cliente[i].c << "\t";
-        cout << cliente[i].d << "\t";
-        cout << cliente[i].e << "\t";
-        cout << cliente[i].f << "\t";
-        cout << cliente[i].g << "\t";
-        cout << cliente[i].h << "\t";
-        cout << cliente[i].i << "\t";
-        cout << cliente[i].j << "\t";
-        cout << cliente[i].k << "\t";
-        cout << cliente[i].l << "\t";
-        cout << cliente[i].m << "\t";
-        cout << cliente[i].n << "\t";
-        cout << cliente[i].o << "\t";
-        cout << cliente[i].p << "\t";
-        cout << cliente[i].q << "\t";
+        cout << cliente[i].data_cadastro << "\t";
+        cout << cliente[i].num_cartao << "\t";
+        cout << cliente[i].classificacao << "\t";
+        cout << cliente[i].estado_civil << "\t";
+        cout << cliente[i].tem_filhos << "\t";
+        cout << cliente[i].limite_disponivel << "\t";
+        cout << cliente[i].medalhas << "\t";
+        cout << cliente[i].CNH << "\t";
+        cout << cliente[i].cartao_adicional << "\t";
+        cout << cliente[i].votos << "\t";
+        cout << cliente[i].renda_familiar << "\t";
+        cout << cliente[i].profissao << "\t";
+        cout << cliente[i].outros_cartoes << "\t";
+        cout << cliente[i].bonus_avaliacoes << "\t";
+        cout << cliente[i].sexo << "\t";
+        cout << cliente[i].num_solicitacao_cartao << "\t";
         cout << cliente[i].saldo_historico << "\t" << endl;
     }
 }
